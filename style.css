@@ -103,3 +103,9 @@ footer .l{display:flex;gap:18px;flex-wrap:wrap}
 .cvs{display:flex;gap:6px;align-items:center;font:400 13px var(--f-mono);color:var(--muted)}
 .cvs a{color:var(--accent);text-decoration:none} .cvs a:hover{text-decoration:underline}
 .row .val.wait{color:var(--muted)}
+
+/* phone: let long readings break under the number instead of overlapping the system name */
+@media (max-width:640px){
+  .row .val{white-space:normal}
+  .row .val em{display:block;margin-left:0}
+}
