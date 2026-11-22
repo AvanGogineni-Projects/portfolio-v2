@@ -37,7 +37,7 @@ a{color:inherit}
   background-size:28px 28px}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:24px;font-size:15px}
 nav .me{font-weight:800;text-decoration:none;display:flex;align-items:center;gap:10px}
-nav .me img{width:26px;height:26px}
+nav .me img{width:28px;height:28px;border-radius:7px;box-shadow:0 0 0 1px var(--hero-line)}
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
 nav ul a{text-decoration:none;color:var(--hero-soft)} nav ul a:hover{color:var(--hero-ink)}
 .theme{font:500 13px var(--f-mono);background:transparent;border:1px solid var(--hero-line);color:var(--hero-soft);padding:4px 10px;border-radius:999px;cursor:pointer}
