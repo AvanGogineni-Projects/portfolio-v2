@@ -1,17 +1,18 @@
 /* Layout: one readable column; a bio sentence, then a live "systems board", then a table-of-contents project index that expands in place. */
+/* Palette: sage paper + pine green work together; signal orange is the one loud colour, used in only a few places. */
 :root{
-  --bg:#F3F4F1; --surface:#FFFFFF; --ink:#14171A; --muted:#5B6168; --line:#D9DCD6;
-  --accent:#1F49C7; --live:#1A8F4E; --warn:#B26A00;
+  --bg:#EEF2EC; --surface:#F8FAF6; --ink:#13201A; --muted:#55665C; --line:#CCD6CE;
+  --accent:#1E5B42; --pop:#FF5B1A; --on-pop:#13201A; --live:#FF5B1A; --warn:#B26A00;
   --f-display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
   --f-body:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111315; --surface:#181B1E; --ink:#ECEDEA; --muted:#9BA1A8; --line:#2A2E33;
-  --accent:#7D9BFF; --live:#4CC985; --warn:#E3A341; color-scheme:dark}}
+  --bg:#0F1713; --surface:#15201A; --ink:#E8EFE9; --muted:#93A69A; --line:#24332B;
+  --accent:#7FD1A8; --pop:#FF6A2B; --on-pop:#0F1713; --live:#FF6A2B; --warn:#E3A341; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#111315; --surface:#181B1E; --ink:#ECEDEA; --muted:#9BA1A8; --line:#2A2E33;
-  --accent:#7D9BFF; --live:#4CC985; --warn:#E3A341; color-scheme:dark}
+  --bg:#0F1713; --surface:#15201A; --ink:#E8EFE9; --muted:#93A69A; --line:#24332B;
+  --accent:#7FD1A8; --pop:#FF6A2B; --on-pop:#0F1713; --live:#FF6A2B; --warn:#E3A341; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body)}
@@ -30,10 +31,12 @@ nav ul a{text-decoration:none;color:var(--muted)} nav ul a:hover{color:var(--ink
 
 /* intro */
 .intro h1{font:500 clamp(28px,4.6vw,44px)/1.22 var(--f-display);letter-spacing:-.01em;margin:0;color:var(--muted);text-wrap:balance}
-.intro h1 b{color:var(--ink);font-weight:700}
+.intro h1 b{color:var(--accent);font-weight:700}
+.intro h1 b:first-child{color:var(--ink)}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line)}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary{background:var(--pop);color:var(--on-pop);border-color:var(--pop)}
+.btn.primary:hover{border-color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
 .btn:hover{border-color:var(--ink)}
 .copy{font:500 14px var(--f-mono);color:var(--muted);background:none;border:0;cursor:pointer;padding:11px 4px}
 .copy:hover{color:var(--ink)}
@@ -45,7 +48,7 @@ nav ul a{text-decoration:none;color:var(--muted)} nav ul a:hover{color:var(--ink
 .head small{font:400 12px var(--f-mono);color:var(--muted)}
 
 /* live board */
-.board{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.board{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--pop);border-radius:12px;overflow:hidden}
 .board .head{border:0;padding:16px 20px 12px;margin:0;border-bottom:1px solid var(--line)}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--live);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 0 var(--live);animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--live) 55%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
@@ -57,7 +60,7 @@ nav ul a{text-decoration:none;color:var(--muted)} nav ul a:hover{color:var(--ink
 .row .val{font:500 22px var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .row .val em{font-style:normal;font-size:13px;color:var(--muted);margin-left:6px}
 .row .meta{grid-column:2 / -1;font:400 12px var(--f-mono);color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
-.good{color:var(--live)}
+.good{color:var(--accent)}
 .note{font:400 12px var(--f-mono);color:var(--warn);padding:10px 20px;border-top:1px dashed var(--line)}
 
 /* project index */
@@ -68,7 +71,8 @@ nav ul a{text-decoration:none;color:var(--muted)} nav ul a:hover{color:var(--ink
 .idx .lead{flex:1;border-bottom:1px dotted var(--muted);transform:translateY(-5px);min-width:16px}
 .idx .kpi{font:400 13px var(--f-mono);color:var(--muted);text-align:right}
 .idx .chev{font:400 14px var(--f-mono);color:var(--muted);width:14px;transition:transform .2s}
-.idx li[data-open] .chev{transform:rotate(90deg)}
+.idx li[data-open] .chev{transform:rotate(90deg);color:var(--pop)}
+.idx li[data-open] .name{color:var(--accent)}
 .detail{padding:0 0 22px;display:grid;gap:12px;max-width:68ch}
 .detail p{margin:0}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -109,3 +113,5 @@ footer .l{display:flex;gap:18px;flex-wrap:wrap}
   .row .val{white-space:normal}
   .row .val em{display:block;margin-left:0}
 }
+
+::selection{background:var(--pop);color:var(--on-pop)}
