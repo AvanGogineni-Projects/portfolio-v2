@@ -46,6 +46,8 @@ def summarise_elvarsel(d):
         "high": round(max(p["high"] for p in pts), 1),
         "hours": len(pts),
         "as_of": d["as_of"],
+        # hourly [time, price, low, high] for the board's forecast chart
+        "series": [[p["time"], round(p["price_eur_mwh"], 1), round(p["low"], 1), round(p["high"], 1)] for p in pts],
     }
 
 

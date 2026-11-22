@@ -19,6 +19,7 @@ def test_busskoll_percentage():
 def test_elvarsel_avg_and_peak():
     s = summarise_elvarsel(ELV)
     assert (s["avg"], s["peak"], s["peak_time"], s["low"], s["high"]) == (90.0, 100.0, "b", 40.0, 120.0)
+    assert s["series"] == [["a", 80.0, 40.0, 100.0], ["b", 100.0, 50.0, 120.0]]
 
 
 def test_failed_source_keeps_previous_value():

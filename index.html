@@ -4,123 +4,134 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Avan Gogineni · AI & Software Engineer</title>
-<meta name="description" content="Avan Gogineni, AI and software engineer in Stockholm building production LLM and RAG systems. Live readings from his running projects.">
+<meta name="description" content="Avan Gogineni, AI and software engineer in Stockholm building production LLM and RAG systems. Live readings and demo films from his running projects.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
-<div class="wrap">
-  <nav aria-label="Main">
-    <a class="me" href="#top">Avan Gogineni</a>
-    <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button class="theme" id="theme" type="button" aria-label="Toggle colour theme">◐ theme</button></li>
-    </ul>
-  </nav>
+<div class="top">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="me" href="#top"><img src="favicon.svg" alt="">Avan Gogineni</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme" id="theme" type="button" aria-label="Toggle colour theme">◐ theme</button></li>
+      </ul>
+    </nav>
 
-  <header class="intro" id="top">
-    <h1><b>Avan Gogineni</b> is an AI &amp; software engineer building production <b>LLM and RAG systems</b> at <b>Beta Bridge</b> in Stockholm, previously at <b>Ericsson</b>.</h1>
-    <div class="actions">
-      <a class="btn primary" href="cv/Avan_Gogineni_Resume_AI.pdf" target="_blank" rel="noopener">Download CV ↓</a>
-      <span class="cvs">also as <a href="cv/Avan_Gogineni_Resume_S.pdf" target="_blank" rel="noopener">software</a>·<a href="cv/Avan_Gogineni_Resume_DE.pdf" target="_blank" rel="noopener">data</a></span>
-      <a class="btn" href="https://linkedin.com/in/avangogineni" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="https://github.com/AvanGogineni-Projects" target="_blank" rel="noopener">GitHub ↗</a>
-      <button class="copy" type="button" data-copy="avangogineni21@gmail.com">avangogineni21@gmail.com ⧉</button>
-    </div>
-    <div class="facts">
-      <span>Python · FastAPI · .NET · Azure OpenAI · LangGraph · Databricks</span>
-      <span>MSc Computer Science, BTH</span>
-      <span>English · Swedish (learning)</span>
-    </div>
-  </header>
+    <div class="hero" id="top">
+      <header class="intro">
+        <h1><b>Avan Gogineni</b> is an AI &amp; software engineer building production <b class="hl">LLM and RAG systems</b> at <b>Beta Bridge</b> in Stockholm, previously at <b>Ericsson</b>.</h1>
+        <div class="actions">
+          <a class="btn primary" href="cv/Avan_Gogineni_Resume_AI.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+          <span class="cvs">also as <a href="cv/Avan_Gogineni_Resume_S.pdf" target="_blank" rel="noopener">software</a>·<a href="cv/Avan_Gogineni_Resume_DE.pdf" target="_blank" rel="noopener">data</a></span>
+          <a class="btn" href="https://linkedin.com/in/avangogineni" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/AvanGogineni-Projects" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="facts">
+          <span>Python · FastAPI · .NET · Azure OpenAI · LangGraph · Databricks</span>
+          <span>MSc Computer Science, BTH</span>
+          <span>English · Swedish (learning)</span>
+        </div>
+      </header>
 
-  <section aria-labelledby="live-h">
-    <div class="board">
-      <div class="head">
-        <h2 id="live-h"><span class="dot" aria-hidden="true"></span>Running now</h2>
-        <small id="updated">loading live readings…</small>
-      </div>
-      <a class="row" href="https://busskoll-pearl.vercel.app" target="_blank" rel="noopener">
-        <span class="sys">Busskoll</span>
-        <span class="what">Bus-arrival error vs SL's own forecast, last 21 days</span>
-        <span class="val wait" id="v-bus">…</span>
-        <span class="meta"><span id="m-bus">LightGBM · reads SL's feed every 90 s</span><span>live map ↗</span></span>
-      </a>
-      <a class="row" href="https://elvarsel.vercel.app" target="_blank" rel="noopener">
-        <span class="sys">Elvarsel</span>
-        <span class="what" id="w-elv">Next-day electricity price forecast, SE3</span>
-        <span class="val wait" id="v-elv">…</span>
-        <span class="meta"><span id="m-elv">12 Nordic zones · retrained daily</span><span>dashboard ↗</span></span>
-      </a>
-      <a class="row" href="https://tenderlens-eosin.vercel.app" target="_blank" rel="noopener">
-        <span class="sys">Tenderlens</span>
-        <span class="what">Swedish public contracts ending in the next 12 months</span>
-        <span class="val wait" id="v-ten">…</span>
-        <span class="meta"><span id="m-ten">Databricks + dbt · daily</span><span>open app ↗</span></span>
-      </a>
-      <a class="row" href="https://bolagsvakt.vercel.app" target="_blank" rel="noopener">
-        <span class="sys">Bolagsvakt</span>
-        <span class="what">Swedish companies tracked for risk changes</span>
-        <span class="val">982,666</span>
-        <span class="meta"><span id="m-bol">SCD2 history · refreshed weekly</span><span>open app ↗</span></span>
-      </a>
-      <div class="note" id="live-err" hidden>Live readings could not load right now. Each row still links to its running app.</div>
+      <aside class="board" aria-labelledby="live-h">
+        <div class="bh">
+          <h2 id="live-h"><span class="dot" aria-hidden="true"></span>Running now</h2>
+          <small id="updated">loading live readings…</small>
+        </div>
+        <a class="row" href="https://elvarsel.vercel.app" target="_blank" rel="noopener">
+          <span class="sys">Elvarsel ↗</span>
+          <span class="what" id="w-elv">Next-day electricity price forecast, SE3</span>
+          <span class="val wait" id="v-elv">…</span>
+          <span class="chart" id="c-elv"></span>
+          <span class="meta" id="m-elv">12 Nordic zones · retrained daily</span>
+        </a>
+        <a class="row" href="https://busskoll-pearl.vercel.app" target="_blank" rel="noopener">
+          <span class="sys">Busskoll ↗</span>
+          <span class="what">Bus-arrival error vs SL's own forecast, last 21 days</span>
+          <span class="val wait" id="v-bus">…</span>
+          <span class="meta" id="m-bus">LightGBM · reads SL's feed every 90 s</span>
+        </a>
+        <a class="row" href="https://tenderlens-eosin.vercel.app" target="_blank" rel="noopener">
+          <span class="sys">Tenderlens ↗</span>
+          <span class="what">Swedish public contracts ending in the next 12 months</span>
+          <span class="val wait" id="v-ten">…</span>
+          <span class="meta" id="m-ten">Databricks + dbt · daily</span>
+        </a>
+        <a class="row" href="https://bolagsvakt.vercel.app" target="_blank" rel="noopener">
+          <span class="sys">Bolagsvakt ↗</span>
+          <span class="what">Swedish companies tracked for risk changes</span>
+          <span class="val">982,666</span>
+          <span class="meta" id="m-bol">SCD2 history · weekly</span>
+        </a>
+        <div class="note" id="live-err" hidden>Live readings could not load right now. Each row still links to its running app.</div>
+      </aside>
     </div>
-  </section>
-
-  <section id="work" aria-labelledby="work-h">
-    <div class="head"><h2 id="work-h">Selected work</h2><small>click a row to open it</small></div>
-    <ul class="idx" id="idx"></ul>
-  </section>
-
-  <section id="experience" aria-labelledby="exp-h">
-    <div class="head"><h2 id="exp-h">Experience</h2><small>since 2024</small></div>
-    <div class="job">
-      <div class="when">Feb 2025 – now</div>
-      <div><h3>Machine Learning Engineer &amp; Developer</h3><div class="org">Beta Bridge Ventures AB · Stockholm</div>
-        <ul>
-          <li>Rebuilt a multi-agent LLM pipeline into one agentic RAG system (Azure OpenAI, LangGraph); typical response time from <b>about 4 s to under 2 s</b>.</li>
-          <li>Hybrid retrieval (HNSW + BM25 with RRF) across Azure AI Search, Pinecone and Vertex AI, tuned with recall@k.</li>
-          <li>Document ingestion for PDF, Word, Excel and HTML with OCR fallback; <b>about 140 documents</b> indexed.</li>
-          <li>FastAPI and .NET 6 APIs serving ML inference for EcoPRISM, an ESG analytics platform.</li>
-        </ul></div>
-    </div>
-    <div class="job">
-      <div class="when">Jun 2024 – Jan 2025</div>
-      <div><h3>Summer Internship, R&amp;D</h3><div class="org">Ericsson AB · Lund</div>
-        <ul><li>Rewrote a ~1,900-line Tcl/Tk FPGA build script as a Python library that later projects reused.</li></ul></div>
-    </div>
-    <div class="job">
-      <div class="when">Jan – Jun 2024</div>
-      <div><h3>Master Thesis Intern</h3><div class="org">Ericsson AB, Microwave Test · Göteborg</div>
-        <ul><li>Time-series and deep-learning models predicting Trouble Reports for the MINILINK 66 portfolio, from JIRA data.</li></ul></div>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <span>Open to AI, backend and software engineering roles · Stockholm or remote</span>
-    <span class="l">
-      <a href="mailto:avangogineni21@gmail.com">avangogineni21@gmail.com</a>
-      <a href="https://linkedin.com/in/avangogineni" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </span>
-  </footer>
+  </div>
 </div>
+
+<main class="wrap">
+  <section class="block" id="work" aria-labelledby="work-h">
+    <div class="head"><h2 id="work-h">Selected work</h2><small>hover or tap a film to play · sound is optional</small></div>
+    <div class="cards" id="idx"></div>
+  </section>
+
+  <section class="block" id="experience" aria-labelledby="exp-h">
+    <div class="head"><h2 id="exp-h">Experience</h2><small>since 2024</small></div>
+    <div class="jobs">
+      <div class="job">
+        <div class="when">Feb 2025 – now</div>
+        <div><h3>Machine Learning Engineer &amp; Developer</h3><div class="org">Beta Bridge Ventures AB · Stockholm</div>
+          <ul>
+            <li>Rebuilt a multi-agent LLM pipeline into one agentic RAG system (Azure OpenAI, LangGraph); typical response time from <b>about 4 s to under 2 s</b>.</li>
+            <li>Hybrid retrieval (HNSW + BM25 with RRF) across Azure AI Search, Pinecone and Vertex AI, tuned with recall@k.</li>
+            <li>Document ingestion for PDF, Word, Excel and HTML with OCR fallback; <b>about 140 documents</b> indexed.</li>
+            <li>FastAPI and .NET 6 APIs serving ML inference for EcoPRISM, an ESG analytics platform.</li>
+          </ul></div>
+      </div>
+      <div class="job">
+        <div class="when">Jun 2024 – Jan 2025</div>
+        <div><h3>Summer Internship, R&amp;D</h3><div class="org">Ericsson AB · Lund</div>
+          <ul><li>Rewrote a ~1,900-line Tcl/Tk FPGA build script as a Python library that later projects reused.</li></ul></div>
+      </div>
+      <div class="job">
+        <div class="when">Jan – Jun 2024</div>
+        <div><h3>Master Thesis Intern</h3><div class="org">Ericsson AB, Microwave Test · Göteborg</div>
+          <ul><li>Time-series and deep-learning models predicting Trouble Reports for the MINILINK 66 portfolio, from JIRA data.</li></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="band" id="contact">
+  <div class="wrap">
+    <p class="say">Building something with LLMs?<br>Let's talk.</p>
+    <button class="mail" type="button" data-copy="avangogineni21@gmail.com" title="Copy email address">avangogineni21@gmail.com</button>
+    <div class="meta">
+      <span>Open to AI, backend and software engineering roles · Stockholm or remote</span>
+      <span><a href="https://linkedin.com/in/avangogineni" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="https://github.com/AvanGogineni-Projects" target="_blank" rel="noopener">GitHub ↗</a></span>
+    </div>
+  </div>
+</footer>
 
 <script>
 const GH = "https://github.com/AvanGogineni-Projects/";
 const P = [
- {n:"Bolagsvakt",k:"AUC 0.784 · 982k companies",d:"Company-risk monitoring for Swedish small businesses. Weekly snapshots of 982,666 companies diffed into SCD2 history, 1.25M annual reports parsed from iXBRL, and an explainable risk score that beats the negative-equity rule (AUC 0.784 vs 0.609).",t:["Python","DuckDB","scikit-learn","Postgres","FastAPI","React"],a:"https://bolagsvakt.vercel.app",s:GH+"Bolagsvakt"},
- {n:"Tenderlens",k:"2.4M notices · 32 dbt tests",d:"Public-procurement intelligence. A daily Databricks pipeline parses every EU tender notice from eForms XML into Delta tables, with expectations, a quarantine and a dbt gold layer, served by a read-only FastAPI and React site.",t:["Databricks","Spark","Delta Lake","dbt","Postgres","FastAPI"],a:"https://tenderlens-eosin.vercel.app",s:GH+"Tenderlens"},
- {n:"Busskoll",k:"beats SL's own forecast",d:"Live arrival predictions for Stockholm buses. A LightGBM model corrects SL's own forecast and grades every prediction against GPS-measured arrivals; the board above shows its current 21-day score.",t:["Python","LightGBM","GTFS-RT","FastAPI","React"],a:"https://busskoll-pearl.vercel.app",s:GH+"Busskoll"},
- {n:"Elvarsel",k:"15–42% lower MAE · 12 zones",d:"Next-day electricity prices for all 12 Nordic bidding zones, with a calibrated 80% range, a point-in-time feature store and a daily retrain-and-forecast job.",t:["Python","LightGBM","FastAPI","Postgres","GitHub Actions"],a:"https://elvarsel.vercel.app",s:GH+"Elvarsel"},
- {n:"Platsjakt",k:"LLM job matching · ~$5/month",d:"An AI job-application co-pilot. It ranks roles from the Arbetsförmedlingen API with an LLM scorer and drafts grounded resumes with a human review step. It flags gaps and never auto-submits.",t:["Python","Claude API","LaTeX"],a:"https://platsjakt.vercel.app",s:null},
- {n:"Document-search assistant",k:"client project · NDA",d:"A support assistant that answers from a client's own knowledge base: one tool-calling agent that retrieves, asks clarifying questions and raises tickets. Shown at architecture level only.",t:["Azure OpenAI","LangGraph","Azure AI Search","Pinecone"],a:null,s:null}
+ {n:"Bolagsvakt",k:"AUC 0.784 · 982k companies",v:"bolagsvakt",d:"Company-risk monitoring for Swedish small businesses. Weekly snapshots of 982,666 companies diffed into SCD2 history, 1.25M annual reports parsed from iXBRL, and an explainable risk score that beats the negative-equity rule (AUC 0.784 vs 0.609).",t:["Python","DuckDB","scikit-learn","Postgres","FastAPI","React"],a:"https://bolagsvakt.vercel.app",s:GH+"Bolagsvakt"},
+ {n:"Tenderlens",k:"2.4M notices · 32 dbt tests",v:"tenderlens",d:"Public-procurement intelligence. A daily Databricks pipeline parses every EU tender notice from eForms XML into Delta tables, with expectations, a quarantine and a dbt gold layer, served by a read-only FastAPI and React site.",t:["Databricks","Spark","Delta Lake","dbt","Postgres","FastAPI"],a:"https://tenderlens-eosin.vercel.app",s:GH+"Tenderlens"},
+ {n:"Busskoll",k:"beats SL's own forecast",v:"busskoll",d:"Live arrival predictions for Stockholm buses. A LightGBM model corrects SL's own forecast and grades every prediction against GPS-measured arrivals; the board at the top shows its current 21-day score.",t:["Python","LightGBM","GTFS-RT","FastAPI","React"],a:"https://busskoll-pearl.vercel.app",s:GH+"Busskoll"},
+ {n:"Elvarsel",k:"15–42% lower MAE · 12 zones",v:"elvarsel",d:"Next-day electricity prices for all 12 Nordic bidding zones, with a calibrated 80% range, a point-in-time feature store and a daily retrain-and-forecast job. The curve at the top is today's live forecast.",t:["Python","LightGBM","FastAPI","Postgres","GitHub Actions"],a:"https://elvarsel.vercel.app",s:GH+"Elvarsel"},
+ {n:"Platsjakt",k:"LLM job matching · ~$5/month",v:"platsjakt",d:"An AI job-application co-pilot. It ranks roles from the Arbetsförmedlingen API with an LLM scorer and drafts grounded resumes with a human review step. It flags gaps and never auto-submits.",t:["Python","Claude API","LaTeX"],a:"https://platsjakt.vercel.app",s:null},
+ {n:"Signaljakt",k:"buying signals with evidence",v:"signaljakt",d:"Platsjakt's pipeline turned around for companies: it flags job ads that signal an ERP change, ranks the companies as leads and quotes each ad as evidence. Companies and people in the film are placeholders.",t:["Python","Claude API","Postgres"],a:null,s:null},
+ {n:"Document-search assistant",k:"client project · NDA",f:["query","*agent","retrieve · clarify · ticket","grounded answer"],d:"A support assistant that answers from a client's own knowledge base: one tool-calling agent that retrieves, asks clarifying questions and raises tickets. Shown at architecture level only.",t:["Azure OpenAI","LangGraph","Azure AI Search","Pinecone"],a:null,s:null}
 ];
 </script>
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
