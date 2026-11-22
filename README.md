@@ -2,7 +2,12 @@
 
 Personal site: https://avangogineni-projects.github.io/portfolio-v2/
 
-A static page (`index.html`, `style.css`) served by GitHub Pages. The "Running now" board reads `data/live.json`.
+Static pages served by GitHub Pages, sharing `style.css` and `app.js`:
+
+- `/` (`index.html`): AI engineer version, with the AI CV.
+- `/fullstack/` (`fullstack/index.html`): full-stack / software engineer version, with the software CV. Not linked from the main page; send it directly for software roles.
+
+Each page holds its own text and project list (`P`); `app.js` renders the project index and the "Running now" board from `data/live.json`.
 
 ## Live readings
 

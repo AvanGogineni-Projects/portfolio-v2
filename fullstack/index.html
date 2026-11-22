@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avan Gogineni · Full-Stack Software Engineer</title>
+<meta name="description" content="Avan Gogineni, full-stack software engineer in Stockholm: React and TypeScript front ends, FastAPI and .NET APIs, Postgres, tested in CI. Live readings from his running projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css?v=2">
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="me" href="#top">Avan Gogineni</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="theme" id="theme" type="button" aria-label="Toggle colour theme">◐ theme</button></li>
+    </ul>
+  </nav>
+
+  <header class="intro" id="top">
+    <h1><b>Avan Gogineni</b> is a full-stack software engineer building <b>React front ends, FastAPI and .NET APIs</b> at <b>Beta Bridge</b> in Stockholm, previously at <b>Ericsson</b>.</h1>
+    <div class="actions">
+      <a class="btn primary" href="../cv/Avan_Gogineni_Resume_S.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+      <span class="cvs">also as <a href="../cv/Avan_Gogineni_Resume_AI.pdf" target="_blank" rel="noopener">AI</a>·<a href="../cv/Avan_Gogineni_Resume_DE.pdf" target="_blank" rel="noopener">data</a></span>
+      <a class="btn" href="https://linkedin.com/in/avangogineni" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/AvanGogineni-Projects" target="_blank" rel="noopener">GitHub ↗</a>
+      <button class="copy" type="button" data-copy="avangogineni21@gmail.com">avangogineni21@gmail.com ⧉</button>
+    </div>
+    <div class="facts">
+      <span>React · TypeScript · Python/FastAPI · .NET 6 · Postgres · Azure · GitHub Actions</span>
+      <span>MSc Computer Science, BTH</span>
+      <span>English · Swedish (learning)</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="live-h">
+    <div class="board">
+      <div class="head">
+        <h2 id="live-h"><span class="dot" aria-hidden="true"></span>Running now</h2>
+        <small id="updated">loading live readings…</small>
+      </div>
+      <a class="row" href="https://busskoll-pearl.vercel.app" target="_blank" rel="noopener">
+        <span class="sys">Busskoll</span>
+        <span class="what">Bus-arrival error vs SL's own forecast, last 21 days</span>
+        <span class="val wait" id="v-bus">…</span>
+        <span class="meta"><span id="m-bus">LightGBM · reads SL's feed every 90 s</span><span>live map ↗</span></span>
+      </a>
+      <a class="row" href="https://elvarsel.vercel.app" target="_blank" rel="noopener">
+        <span class="sys">Elvarsel</span>
+        <span class="what" id="w-elv">Next-day electricity price forecast, SE3</span>
+        <span class="val wait" id="v-elv">…</span>
+        <span class="meta"><span id="m-elv">12 Nordic zones · retrained daily</span><span>dashboard ↗</span></span>
+      </a>
+      <a class="row" href="https://tenderlens-eosin.vercel.app" target="_blank" rel="noopener">
+        <span class="sys">Tenderlens</span>
+        <span class="what">Swedish public contracts ending in the next 12 months</span>
+        <span class="val wait" id="v-ten">…</span>
+        <span class="meta"><span id="m-ten">Databricks + dbt · daily</span><span>open app ↗</span></span>
+      </a>
+      <a class="row" href="https://bolagsvakt.vercel.app" target="_blank" rel="noopener">
+        <span class="sys">Bolagsvakt</span>
+        <span class="what">Swedish companies tracked for risk changes</span>
+        <span class="val">982,666</span>
+        <span class="meta"><span id="m-bol">SCD2 history · refreshed weekly</span><span>open app ↗</span></span>
+      </a>
+      <div class="note" id="live-err" hidden>Live readings could not load right now. Each row still links to its running app.</div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="head"><h2 id="work-h">Selected work</h2><small>click a row to open it</small></div>
+    <ul class="idx" id="idx"></ul>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="head"><h2 id="exp-h">Experience</h2><small>since 2024</small></div>
+    <div class="job">
+      <div class="when">Feb 2025 – now</div>
+      <div><h3>Machine Learning Engineer &amp; Developer</h3><div class="org">Beta Bridge Ventures AB · Stockholm</div>
+        <ul>
+          <li>Designed and shipped REST APIs in FastAPI and .NET 6 that serve React/TypeScript front ends, with validation, authentication and error handling.</li>
+          <li>Built and maintained full-stack features on EcoPRISM, an ESG analytics platform: back ends, React components, Azure Functions and Blob Storage.</li>
+          <li>Python document-ingestion microservice for PDF, Word, Excel and HTML with OCR fallback; <b>about 140 documents</b> indexed.</li>
+          <li>Integrated an LLM knowledge assistant through tool-calling endpoints; typical response time from <b>about 4 s to under 2 s</b>.</li>
+        </ul></div>
+    </div>
+    <div class="job">
+      <div class="when">Jun 2024 – Jan 2025</div>
+      <div><h3>Summer Internship, R&amp;D</h3><div class="org">Ericsson AB · Lund</div>
+        <ul><li>Rewrote a ~1,900-line Tcl/Tk FPGA build script as a Python library that later projects reused.</li><li>Built a real-time frequency-domain visualiser and a Streamlit app that automated Excel reporting.</li></ul></div>
+    </div>
+    <div class="job">
+      <div class="when">Jan – Jun 2024</div>
+      <div><h3>Master Thesis Intern</h3><div class="org">Ericsson AB, Microwave Test · Göteborg</div>
+        <ul><li>Time-series and deep-learning models predicting Trouble Reports for the MINILINK 66 portfolio, from JIRA data.</li></ul></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <span>Open to full-stack, backend and software engineering roles · Stockholm or remote</span>
+    <span class="l">
+      <a href="mailto:avangogineni21@gmail.com">avangogineni21@gmail.com</a>
+      <a href="https://linkedin.com/in/avangogineni" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </span>
+  </footer>
+</div>
+
+<script>
+const GH = "https://github.com/AvanGogineni-Projects/";
+const P = [
+ {n:"Bolagsvakt",k:"multi-tenant · search 370 ms → 3 ms",d:"A multi-tenant FastAPI and Postgres (Supabase) app with row-level security on its own database role and a React/TypeScript front end on Vercel. A weekly job publishes 1M rows in one transaction, and search went from 370 ms to 3 ms. Behind it: SCD2 history for 982,666 Swedish companies.",t:["React","TypeScript","FastAPI","Postgres","Supabase","Vercel"],a:"https://bolagsvakt.vercel.app",s:GH+"Bolagsvakt"},
+ {n:"Busskoll",k:"live API inside a 30k-call quota",d:"A live FastAPI service on Vercel over SL's realtime feed, kept inside a 30k-calls/month quota with throttling and a 90 s CDN cache, and a React/TypeScript live map. Its model beats SL's own arrival predictions; the board above shows the current score.",t:["React","TypeScript","FastAPI","Vercel","GTFS-RT"],a:"https://busskoll-pearl.vercel.app",s:GH+"Busskoll"},
+ {n:"Elvarsel",k:"ruff + pytest in CI · daily job",d:"A FastAPI service, React/TypeScript dashboard and Postgres for 12 Nordic price zones, with lint and tests in CI on every pull request and a scheduled GitHub Action that ingests, retrains and forecasts daily.",t:["React","TypeScript","FastAPI","Postgres","GitHub Actions","pytest"],a:"https://elvarsel.vercel.app",s:GH+"Elvarsel"},
+ {n:"Tenderlens",k:"read-only API · CDN-cached",d:"A read-only FastAPI on a SELECT-only Postgres role, CDN-cached, behind a React/TypeScript site refreshed daily from a Databricks pipeline over 2.4M EU tender notices.",t:["React","TypeScript","FastAPI","Postgres","Databricks"],a:"https://tenderlens-eosin.vercel.app",s:GH+"Tenderlens"},
+ {n:"Platsjakt",k:"LLM-assisted app · ~$5/month",d:"A job-application co-pilot: it ranks roles from the Arbetsförmedlingen API, drafts tailored resumes as verified PDFs, and keeps a human review step before anything is sent.",t:["Python","Claude API","LaTeX","SMTP"],a:"https://platsjakt.vercel.app",s:null},
+ {n:"Support-assistant integration",k:"client project · NDA",d:"Tool-calling endpoints that connect a client's knowledge assistant to the product, including ticket creation, with tracing, guardrails and cost limits on every request. Shown at architecture level only.",t:["FastAPI",".NET 6","Azure OpenAI","LangGraph"],a:null,s:null}
+];
+</script>
+<script src="../app.js?v=1"></script>
+</body>
+</html>
