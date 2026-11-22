@@ -149,7 +149,8 @@ section.block{padding-block:clamp(48px,7vw,96px) 0}
   .title .lead{display:none}
   .title .kpi{flex-basis:100%;text-align:left}
   .job{grid-template-columns:1fr}
-  .row .val{font-size:20px}
+  .row .val{font-size:20px;grid-row:1;align-self:baseline}
+  .row .what{grid-column:1 / -1}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
