@@ -39,8 +39,8 @@ nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:cent
 nav ul a{text-decoration:none;color:var(--muted)} nav ul a:hover{color:var(--ink)}
 .theme{font:500 13px var(--f-mono);background:var(--bg);border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:999px;cursor:pointer}
 
-.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start;padding-block:clamp(28px,6vw,72px) clamp(40px,6vw,80px)}
-.intro h1{font:500 clamp(32px,4.1vw,60px)/1.12 var(--f-display);letter-spacing:-.02em;margin:0;color:var(--muted);text-wrap:balance}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start;padding-block:clamp(28px,6vw,72px) clamp(40px,6vw,80px)}
+.intro h1{font:500 clamp(30px,3.5vw,54px)/1.12 var(--f-display);letter-spacing:-.02em;margin:0;color:var(--muted);text-wrap:balance}
 .intro h1 b{color:var(--accent);font-weight:800}
 .intro h1 b:first-child{color:var(--ink)}
 .intro h1 b.hl{text-decoration:underline;text-decoration-color:var(--pop);text-decoration-thickness:.12em;text-underline-offset:.14em;text-decoration-skip-ink:none}
@@ -98,8 +98,9 @@ section.block{padding-block:clamp(48px,7vw,96px) 0}
 .film button{pointer-events:auto;font:500 12px var(--f-mono);border:0;border-radius:999px;padding:6px 12px;cursor:pointer;background:rgba(15,23,19,.78);color:#EEF2EC;backdrop-filter:blur(4px)}
 .film button.play{background:var(--pop);color:var(--on-pop)}
 .film.playing button.play{background:rgba(15,23,19,.78);color:#EEF2EC}
-.card.feature .film{aspect-ratio:auto;min-height:100%}
-.card.feature .film video{position:absolute;inset:0}
+.card.feature{align-items:center}
+.card.feature .film{align-self:stretch;display:grid;place-items:center}
+.card.feature .film video{aspect-ratio:16/9;height:auto}
 .diagram{aspect-ratio:16/9;display:grid;place-items:center;padding:20px;background:
   linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--bg);background-size:22px 22px}
 .flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;font:500 13px var(--f-mono)}
@@ -140,7 +141,7 @@ section.block{padding-block:clamp(48px,7vw,96px) 0}
 @media (max-width:1000px){
   .hero{grid-template-columns:1fr}
   .card.feature{grid-template-columns:1fr}
-  .card.feature .film{aspect-ratio:16/9;min-height:0}
+  .card.feature .film{aspect-ratio:16/9}
 }
 @media (max-width:720px){
   .cards{grid-template-columns:1fr}
