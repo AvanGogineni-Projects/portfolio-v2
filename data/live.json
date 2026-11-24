@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T23:50:33+00:00",
+  "generated_at": "2026-11-24T09:51:20+00:00",
   "sources": {
     "busskoll": {
       "mae_busskoll": 30.1,
@@ -7,8 +7,8 @@
       "pct_lower": 27,
       "days_beat": 21,
       "days_scored": 21,
-      "as_of": "2026-11-23T23:50:36.175606Z",
-      "fetched_at": "2026-11-23T23:50:33+00:00"
+      "as_of": "2026-11-24T09:51:23.447160Z",
+      "fetched_at": "2026-11-24T09:51:20+00:00"
     },
     "elvarsel": {
       "zone": "SE3",
@@ -166,18 +166,18 @@
           169.2
         ]
       ],
-      "fetched_at": "2026-11-23T23:50:33+00:00"
+      "fetched_at": "2026-11-24T09:51:20+00:00"
     },
     "tenderlens": {
-      "expiring_12m": 11668,
+      "expiring_12m": 11669,
       "awards": 72299,
       "buyers": 1059,
-      "fetched_at": "2026-11-23T23:50:33+00:00"
+      "fetched_at": "2026-11-24T09:51:20+00:00"
     },
     "bolagsvakt": {
       "registry_snapshot": "2026-11-16",
       "published_at": "2026-11-16T13:51:56.965966+00:00",
-      "fetched_at": "2026-11-23T23:50:33+00:00"
+      "fetched_at": "2026-11-24T09:51:20+00:00"
     }
   }
 }
